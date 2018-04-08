@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # django-apps
+    'post',
+
+    # 3rd-party apps
     'django_extensions',
 ]
 
@@ -81,12 +84,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = config_secret_common['django']['databases']
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
