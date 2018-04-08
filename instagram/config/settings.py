@@ -27,6 +27,12 @@ config_secret_common = json.loads(config_secret_common_str)
 
 SECRET_KEY = config_secret_common['django']['secret_key']
 
+# instagram_review/instagram/media/
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+# instagram_review/instagram/static/
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
